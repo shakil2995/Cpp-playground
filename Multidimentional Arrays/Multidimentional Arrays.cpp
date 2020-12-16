@@ -2,78 +2,93 @@
 #include <math.h>
 #include <time.h>
 #include <cstdlib>
+
 using namespace std;
-class MDArray{
+
+class MDArray {
 private:
 
 
-
 public:
-    void mDArray(int size){
-    int Arr[size];
-    /////////////////////////////////////////////////////////////////populate
-    for(int i=0;i<size;i++){
-        Arr[i]=giveRandom();
-        cout<<Arr[i]+1<<" , ";
+    ///                                                               Case 1
+    void mDArray(int i) {
+        int Arr[i];
+        ///                                 populate & Print
+        for (int k = 0; k < i; k++) {
+            Arr[k] = giveRandom();
+            cout << Arr[k] + 1 << " ";
+        }
     }
-    for(int i=0;i<size;i++)
-    {
-        //cout<<Arr[i]+1<<" , ";
+
+    ///                                                               Case 2
+    void mDArray(int i, int j) {
+        int Arr1[i][j];
+        for (int a = 0; a < i; a++) {
+            for (int b = 0; b < j; b++) {
+                Arr1[a][b] = giveRandom();
+                cout << Arr1[a][b] << " ";
+            }
+            cout << endl;
+        }
     }
-    /////////////////////////////////////////////////////////////////printout
 
-        }
-    void mDArray(int Arr1[],int Arr[],int size1,int size2){
+    ///                                                               Case 3
+    void mDArray(int i, int j, int k) {
+        int Arr1[i][j][k];
+    }
 
-        }
-    void mDArray(int Arr1[],int Arr[],int Arr3[],int size1,int size2,int size3){
-
-        }
-    void getArraySize(){
-    //////////////////////////////////////////////////////// call mDArray
-    int dimension;
-    cout<<"Enter the dimension of the array : ";
-    cin >> dimension;
+    void getArraySize() {
+        ///                                                               call mDArray
+        int dimension;
+        cout << "Enter the dimension of the array :";
+        cin >> dimension;
         switch (dimension) {
-            int length,row1,row2,row3,column1,column2,column3;
-            case 1:cout<<"Enter array length : ";
-                    cin>>length;
-                    mDArray(length);
-                    break;
-
-            case 2:cout<<"Enter array length : ";
-                cin>>length;
+            int length, i, j, k;
+            ///                                                               Case 1
+            case 1:
+                cout << "Enter Array Length :";
+                cin >> length;
+                break;
+                ///                                                           Case 2
+            case 2:
+                cout << "Enter Row number :";
+                cin >> i;
+                cout << "Enter Column number :";
+                cin >> j;
+                mDArray(i, j);
+                break;
+                ///                                                           Case 3
+            case 3:
+                cout << "Enter Row number :";
+                cin >> i;
+                cout << "Enter Column number :";
+                cin >> j;
+                cout << "Enter z number :";
+                cin >> k;
+                mDArray(i, j, k);
                 break;
 
-            case 3:cout<<"Enter Row number : ";
-                cin>>row1;
-                cout<<"Enter Column number : ";
-                cin>>column1;
+            default:
+                cout << "Out of bound, Try again";
                 break;
-
-            default:cout<<"Out of bound, Try again";
-                    break;
 
         }
-}
-    void printArray(){
+    }
 
-}
-int giveRandom(){
-    //srand((unsigned) time(NULL));
-    int random = rand()% 10+1;
-    return random;
-}
+    void printArray() {
+
+    }
+
+    int giveRandom() {
+        //srand((unsigned) time(NULL));
+        int random = rand() % 10 + 1;
+        return random;
+    }
 };
 
 
 int main() {
     MDArray mdArray;
     mdArray.getArraySize();
-//    for(int i =0 ;i<=10;i++){
-//        mdArray.giveRandom();
-//    }
-
-  //cout << "\nHello, World!" << endl;
     return 0;
 }
