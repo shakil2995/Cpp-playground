@@ -1,6 +1,4 @@
 #include <iostream>
-#include <math.h>
-#include <time.h>
 #include <cstdlib>
 
 using namespace std;
@@ -10,6 +8,7 @@ private:
 
 
 public:
+    bool exitStatus=true;
     ///                                                               Case 1
     void mDArray(int i) {
         int Arr[i];
@@ -33,21 +32,22 @@ public:
     }
 
     ///                                                               Case 3
-    void mDArray(int i, int j, int k) {
+    static void mDArray(int i, int j, int k) {
         int Arr1[i][j][k];
     }
 
     void getArraySize() {
         ///                                                               call mDArray
         int dimension;
-        cout << "Enter the dimension of the array :";
+        cout << "Enter the dimension of the array 1,2,3 or Enter 4 to exit process :";
         cin >> dimension;
         switch (dimension) {
-            int length, i, j, k;
+            int i, j, k;
             ///                                                               Case 1
             case 1:
                 cout << "Enter Array Length :";
-                cin >> length;
+                cin >> i;
+                mDArray(i);
                 break;
                 ///                                                           Case 2
             case 2:
@@ -67,18 +67,17 @@ public:
                 cin >> k;
                 mDArray(i, j, k);
                 break;
-
+            case 4:exitStatus=false;
+                break;
             default:
                 cout << "Out of bound, Try again";
                 break;
 
         }
     }
-
-    void printArray() {
-
-    }
-
+    bool exitProcess(){
+        return true;
+        }
     int giveRandom() {
         //srand((unsigned) time(NULL));
         int random = rand() % 10 + 1;
@@ -89,6 +88,11 @@ public:
 
 int main() {
     MDArray mdArray;
-    mdArray.getArraySize();
+    while(mdArray.exitStatus)
+    { mdArray.getArraySize();
+       if(mdArray.exitStatus==true) system("pause");
+        system("CLS");
+    }
+
     return 0;
 }
