@@ -5,10 +5,6 @@ using namespace std;
 
 class MDArray {
 private:
-
-
-public:
-    bool exitStatus=true;
     ///                                                               Case 1
     void mDArray(int i) {
         int Arr[i];
@@ -35,7 +31,13 @@ public:
     static void mDArray(int i, int j, int k) {
         int Arr1[i][j][k];
     }
-
+    int giveRandom() {
+        //srand((unsigned) time(NULL));
+        int random = rand() % 10 + 1;
+        return random;
+    }
+public:
+    bool exitStatus=true;
     void getArraySize() {
         ///                                                               call mDArray
         int dimension;
@@ -75,14 +77,7 @@ public:
 
         }
     }
-    bool exitProcess(){
-        return true;
-        }
-    int giveRandom() {
-        //srand((unsigned) time(NULL));
-        int random = rand() % 10 + 1;
-        return random;
-    }
+
 };
 
 
