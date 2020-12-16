@@ -32,7 +32,6 @@ private:
         int Arr1[i][j][k];
     }
     int giveRandom() {
-        //srand((unsigned) time(NULL));
         int random = rand() % 10 + 1;
         return random;
     }
