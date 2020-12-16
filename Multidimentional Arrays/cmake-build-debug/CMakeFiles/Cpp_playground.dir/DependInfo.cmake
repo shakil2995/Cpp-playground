@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "H:/Shakil/PROJECTS/C++/Cpp-playground/Multidimentional Arrays.cpp" "H:/Shakil/PROJECTS/C++/Cpp-playground/cmake-build-debug/CMakeFiles/Cpp_playground.dir/Multidimentional_Arrays.cpp.obj"
+  "H:/Shakil/PROJECTS/C++/Cpp-playground/Multidimentional Arrays/Multidimentional Arrays.cpp" "H:/Shakil/PROJECTS/C++/Cpp-playground/Multidimentional Arrays/cmake-build-debug/CMakeFiles/Cpp_playground.dir/Multidimentional_Arrays.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
