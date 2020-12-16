@@ -1,6 +1,8 @@
 # Default ignored files
 /shelf/
 /cmake-build-debug
+/.idea
+/CMakeLists.txt
 # Datasource local storage ignored files
 /../../../../../../:\Shakil\PROJECTS\C++\Cpp-playground\.idea/dataSources/
 /dataSources.local.xml
