@@ -70,7 +70,7 @@ public:
             case 4:exitStatus=false;
                 break;
             default:
-                cout << "Out of bound, Try again";
+                cout << "\nOut of bound, Try again\n";
                 break;
 
         }
